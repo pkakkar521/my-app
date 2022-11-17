@@ -4,13 +4,13 @@ import React , {useState} from 'react'
 export default function TextForm(props) {
   const [text, setText] = useState(' ');
   const handleUpClick=()=>{
-    console.log("upper case was clicked"+text);
+    
     let newText=text.toUpperCase();
     setText(newText)
     props.showAlert("Converted to Upper case","success");
   }
   const handleLoClick=()=>{
-    console.log("lower case was clicked"+text);
+    
     let newText=text.toLowerCase();
     setText(newText)
     props.showAlert("Converted to Lower case","success");

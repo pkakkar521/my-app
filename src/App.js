@@ -2,18 +2,18 @@
 import './App.css';
 import TextForm from './components/TextForm';
 import Navbar from './components/Navbar';
-import About from './components/About';
+//import About from './components/About';
 import Alert from './components/Alert';
 import React, {useState} from 'react';
 
 
 
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
+//import {
+ // BrowserRouter as Router,
+  //Switch,
+  //Route,
   
-   } from 'react-router-dom';
+   //} from 'react-router-dom';
 function App() {
   const [mode, setMode] = useState('light');
   const [alert, setAlert] = useState(null);
@@ -50,12 +50,12 @@ showAlert("Light mode has been enabled","success");
   
    return (
     <>
-   <Router>
+   
   <Navbar title="TextConvert" cccc="About us" mode={mode} toggleMode={toggleMode}/>
   <Alert alert={alert}/>
   <div className="container my-3">
-  {/*<TextForm showAlert={showAlert} heading="Enter your text below"  mode={mode}/>*/}
- <Switch>
+  <TextForm showAlert={showAlert} heading="Enter your text below"  mode={mode}/>
+ {/*<Switch>
     
           <Route exact path="/about">
             <About mode={mode}/>
@@ -65,10 +65,10 @@ showAlert("Light mode has been enabled","success");
           <TextForm showAlert={showAlert} heading="Try TextConvert - Word counter , Character counter , Remove extra spaces"  mode={mode}/>
          
           </Route>
-        </Switch>
+   </Switch>*/}
         
         </div>
-</Router>
+   {/*</Router>*/}
        
  
   </>
